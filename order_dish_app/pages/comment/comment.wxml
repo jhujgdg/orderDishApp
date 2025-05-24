@@ -1,0 +1,21 @@
+<view class="comment-container">
+  <view class="star-rating">
+    <text>评分：</text>
+    <block wx:for="{{5}}" wx:key="index">
+      <image 
+        src="{{index < rating ? '/utils/images/star-filled.jpg' : '/utils/images/star-empty.jpg'}}" 
+        data-index="{{index + 1}}" 
+        bindtap="onStarTap" 
+        class="star-icon" />
+    </block>
+  </view>
+
+  <view class="comment-input">
+    <textarea 
+      placeholder="请输入您的评论..." 
+      value="{{comment}}" 
+      bindinput="onCommentInput" />
+  </view>
+
+  <button class="submit-btn" type="primary" bindtap="submitComment">提交评论</button>
+</view>

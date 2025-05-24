@@ -1,0 +1,38 @@
+<view class="order-detail-container" wx:if="{{orderDetail}}">
+  <view class="order-info">
+    <text>订单编号：{{orderDetail.orderId}}</text>
+    <text>用户ID：{{orderDetail.userId}}</text>
+    <text>订单状态：{{orderDetail.status}}</text>
+    <text>总金额：￥{{orderDetail.totalAmount}}</text>
+    <text>创建时间：{{orderDetail.createdAt}}</text>
+  </view>
+
+  <view class="order-items">
+    <block wx:for="{{orderItems}}" wx:key="itemId">
+      <view class="order-item">
+        <image class="dish-image" src="{{item.dish.imageUrl}}" mode="aspectFill"></image>
+
+        <view class="dish-info">
+          <text class="dish-name">{{item.dish.name}}</text>
+          <text>数量：{{item.quantity}}</text>
+          <text>单价：￥{{item.priceAtOrder}}</text>
+          <text>小计：￥{{item.priceAtOrder * item.quantity}}</text>
+
+          <!-- 去评论按钮嵌入菜品信息 -->
+          <button 
+            class="comment-btn" 
+            bindtap="goToComment" 
+            data-dishid="{{item.dish.dishId}}" 
+            size="mini" 
+            type="primary">
+            去评论
+          </button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view wx:if="{{!orderDetail}}" class="loading-tip">
+  正在加载订单详情...
+</view>

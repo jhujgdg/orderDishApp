@@ -1,0 +1,16 @@
+<view class="container">
+  <!-- 输入手机号或邮箱 -->
+  <input class="input" placeholder="请输入手机号或邮箱" bindinput="onInputAccount" />
+  
+  <!-- 输入用户名 -->
+  <input class="input" placeholder="请输入用户名" bindinput="onInputUsername" />
+  
+  <!-- 输入密码 -->
+  <input class="input" password placeholder="请输入密码" bindinput="onInputPassword" />
+  
+  <!-- 输入确认密码 -->
+  <input class="input" password placeholder="确认密码" bindinput="onInputConfirmPassword" />
+  
+  <!-- 注册按钮 -->
+  <button class="register-btn" bindtap="onRegister">注册</button>
+</view>

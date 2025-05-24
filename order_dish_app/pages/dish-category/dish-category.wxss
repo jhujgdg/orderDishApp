@@ -1,0 +1,71 @@
+.category-page {
+  display: flex;
+  height: 100vh;
+}
+
+/* 左侧分类菜单 */
+.category-menu {
+  width: 200rpx;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ddd;
+}
+
+.category-item {
+  padding: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.category-item.active {
+  background-color: #ffffff;
+  color: #007aff;
+  font-weight: bold;
+}
+
+/* 右侧菜品列表 */
+.dish-display {
+  flex: 1;
+  padding: 20rpx;
+  background-color: #ffffff;
+}
+
+.dish-card {
+  display: flex;
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.dish-img {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.dish-info {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dish-name {
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-bottom: 10rpx;
+}
+
+.dish-price {
+  font-size: 26rpx;
+  color: #e91e63;
+}
+
+.no-dish, .no-more {
+  text-align: center;
+  margin-top: 50rpx;
+  color: #999;
+}

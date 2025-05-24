@@ -1,0 +1,118 @@
+.order-list {
+  padding: 20rpx;
+}
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+  border: 1px solid #ccc;
+  border-radius: 12rpx;
+}
+.dish-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.item-info {
+  flex: 1;
+}
+.item-name {
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.item-price,
+.item-total {
+  font-size: 26rpx;
+  margin-top: 6rpx;
+}
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  margin-top: 10rpx;
+}
+.delete-button {
+  color: red;
+}
+.total-amount {
+  margin-top: 20rpx;
+  font-weight: bold;
+  text-align: right;
+}
+.submit-button {
+  margin-top: 30rpx;
+  background-color: #07c160;
+  color: white;
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-header button {
+  flex: 1;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: #666;
+}
+
+.tab-header button.active {
+  border-bottom: 2px solid #1aad19;
+  color: #1aad19;
+  font-weight: bold;
+}
+
+.order-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.orders-container {
+  padding: 10px;
+}
+
+.order-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.order-status {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.status-preparing {
+  color: #f39c12; /* 橙色，表示进行中 */
+}
+
+.status-completed {
+  color: #27ae60; /* 绿色，表示已完成 */
+}
+
+.order-actions button {
+  margin-right: 10px;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin-top: 40px;
+}

@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="page-container">
+    <!-- 搜索框 -->
+    <view class="search-box">
+      <input type="text" placeholder="搜索菜品..." confirm-type="search" 
+            bindinput="onSearchInput" bindconfirm="onSearchConfirm" />
+      <button size="mini" bindtap="onSearchConfirm" class="search-button">搜索</button>
+    </view>
+
+    <!-- 推荐菜品 -->
+    <view wx:if="{{!isSearching}}" class="section-container">
+      <view class="section-title">推荐菜品</view>
+      <view class="dish-list">
+        <block wx:for="{{dishes}}" wx:key="dishId">
+          <view class="dish-row" bindtap="onDishClick" data-id="{{item.dishId}}">
+            <image class="dish-img" src="{{item.imageUrl}}" mode="aspectFill" />
+            <view class="dish-info">
+              <view class="dish-name">{{item.name}}</view>
+              <view class="dish-price">￥{{item.price}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <!-- 搜索结果 -->
+    <view wx:if="{{isSearching}}" class="section-container">
+      <view class="section-title">搜索结果</view>
+      <block wx:if="{{searchResults.length > 0}}">
+        <view class="dish-list">
+          <block wx:for="{{searchResults}}" wx:key="dishId">
+            <view class="dish-row" bindtap="onDishClick" data-id="{{item.dishId}}">
+              <image class="dish-img" src="{{item.imageUrl}}" mode="aspectFill" />
+              <view class="dish-info">
+                <view class="dish-name">{{item.name}}</view>
+                <view class="dish-price">￥{{item.price}}</view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="no-result">未找到相关菜品</view>
+      </block>
+    </view>
+  </view>
+</view>>

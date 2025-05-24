@@ -1,0 +1,73 @@
+/* 容器样式 */
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+  background-image: url('https://bpic.588ku.com/back_pic/19/03/26/3d1a24b0de1224e08aa3214630f70607.jpg');
+  background-size: cover; 
+  background-position: center;
+}
+
+/* 登录表单样式 */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 0px; /* 减少与顶部的距离 */
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 每个输入框 */
+.input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.7); /* 半透明边框 */
+  background-color: #f9f9f9;
+}
+
+.input::placeholder {
+  color: #aaa; /* 统一的占位符颜色 */
+}
+
+/* 登录按钮 */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(45deg, #6a1b9a, #8e24aa); /* 渐变色 */
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+.login-button:hover {
+  background: linear-gradient(45deg, #8e24aa, #6a1b9a); /* 按钮悬浮时的渐变色 */
+}
+
+/* 注册链接样式 */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-text {
+  color: #6a1b9a;
+  cursor: pointer;
+}
+
+.register-link:hover .register-text {
+  text-decoration: underline;
+}

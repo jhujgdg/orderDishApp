@@ -1,0 +1,64 @@
+<view class="tab-header">
+  <button class="{{currentTab === 'new' ? 'active' : ''}}" data-tab="new" bindtap="switchTab">新建订单</button>
+  <button class="{{currentTab === 'preparing' ? 'active' : ''}}" data-tab="preparing" bindtap="switchTab">正在进行</button>
+  <button class="{{currentTab === 'completed' ? 'active' : ''}}" data-tab="completed" bindtap="switchTab">已完成</button>
+</view>
+
+<!-- 新建订单区域 -->
+<view wx:if="{{currentTab === 'new'}}">
+  <block wx:for="{{localOrderItems}}" wx:key="dishId">
+    <view class="item">
+      <image class="dish-image" src="{{item.imageUrl}}" mode="aspectFill" />
+      <view class="item-info">
+        <view class="item-name">{{item.name}}</view>
+        <view class="item-price">单价：￥{{item.price}}</view>
+        <view class="item-quantity">
+          <button size="mini" bindtap="decreaseQuantity" data-index="{{index}}">-</button>
+          <text>{{item.quantity}}</text>
+          <button size="mini" bindtap="increaseQuantity" data-index="{{index}}">+</button>
+        </view>
+        <view class="item-total">总价：￥{{item.subtotal}}</view>
+      </view>
+      <button class="delete-button" size="mini" bindtap="deleteItem" data-index="{{index}}">删除</button>
+    </view>
+  </block>
+  <view class="total-amount">总订单金额：￥{{totalAmount}}</view>
+  <button class="submit-button" bindtap="submitOrder">提交订单</button>
+</view>
+
+<!-- 正在进行订单区域 -->
+<view wx:if="{{currentTab === 'preparing'}}" class="orders-container">
+  <block wx:for="{{ordersPreparing}}" wx:key="orderId">
+    <view class="order-item">
+      <view class="order-header">
+        <text>订单ID：{{item.orderId}}</text>
+        <text>总金额：￥{{item.totalAmount}}</text>
+      </view>
+      <view class="order-status">
+        <text>状态：<text class="status-preparing">{{item.status}}</text></text>
+      </view>
+      <!-- 订单详情可以展开显示，或者简单显示菜品数量 -->
+      <view class="order-actions">
+        <button size="mini" type="primary" data-id="{{item.orderId}}" bindtap="markOrderCompleted">完成订单</button>
+        <button size="mini" type="warn" data-id="{{item.orderId}}" bindtap="cancelOrder">删除订单</button>
+      </view>
+    </view>
+  </block>
+  <view wx:if="{{ordersPreparing.length === 0}}" class="empty-tip">暂无正在进行的订单</view>
+</view>
+
+<!-- 已完成订单区域 -->
+<view wx:if="{{currentTab === 'completed'}}" class="orders-container">
+  <block wx:for="{{ordersCompleted}}" wx:key="orderId">
+    <view class="order-item" data-id="{{item.orderId}}" bindtap="goToOrderDetail">
+      <view class="order-header">
+        <text>订单ID：{{item.orderId}}</text>
+        <text>总金额：￥{{item.totalAmount}}</text>
+      </view>
+      <view class="order-status">
+        <text>状态：<text class="status-completed">{{item.status}}</text></text>
+      </view>
+    </view>
+  </block>
+  <view wx:if="{{ordersCompleted.length === 0}}" class="empty-tip">暂无已完成订单</view>
+</view>

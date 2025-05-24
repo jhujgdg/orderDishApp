@@ -1,0 +1,45 @@
+<view class="container">
+  <form bindsubmit="onSubmit">
+
+    <view class="avatar-section" bindtap="chooseAvatar">
+      <image src="{{avatarUrl}}" class="avatar" />
+      <view class="upload-tip">点击更换头像</view>
+    </view>
+
+    <view class="form-item">
+      <text class="label">用户名</text>
+      <input name="username" value="{{username}}" bindinput="onInputUsername" placeholder="请输入用户名" class="input" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">邮箱</text>
+      <input name="email" value="{{user.email}}" placeholder="请输入邮箱" class="input" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">出生日期</text>
+      <picker name="birthDate" mode="date" value="{{birthDate}}" bindchange="onDateChange">
+        <view class="input">{{birthDate || '请选择出生日期'}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">性别</text>
+      <picker name="gender" mode="selector" value="{{genderIndex}}" range="{{genderOptions}}" bindchange="onGenderChange">
+        <view class="input">{{genderOptions[genderIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="section-title">修改密码（如不修改可留空）</view>
+    <view class="form-item">
+      <text class="label">旧密码</text>
+      <input name="oldPassword" type="password" placeholder="输入旧密码" class="input" />
+    </view>
+    <view class="form-item">
+      <text class="label">新密码</text>
+      <input name="newPassword" type="password" placeholder="输入新密码" class="input" />
+    </view>
+
+    <button formType="submit" type="primary" class="save-btn">保存修改</button>
+  </form>
+</view>

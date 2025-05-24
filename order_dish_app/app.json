@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/dishes/dishes",
+    "pages/order/order",
+    "pages/comment/comment",
+    "pages/profile/profile",
+    "pages/register/register",
+    "pages/dish-detail/dish-detail",
+    "pages/edit-profile/edit-profile",
+    "pages/dish-category/dish-category",
+    "pages/local-order/local-order",
+    "pages/order-preparing/order-preparing",
+    "pages/orderDetail/orderDetail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black", 
+    "navigationBarTitleText": "食派", 
+    "navigationBarBackgroundColor": "#FFC107",
+    "navigationBarShadow": "true", 
+    "navigationBarTitleAlign": "center",  
+    "navigationBarHeight": "48px"  
+  },
+  
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#764ba2",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "🏠 首页"
+      },
+      {
+        "pagePath": "pages/dish-category/dish-category",
+        "text": "🍽 菜品分类"
+      },
+      {
+        "pagePath": "pages/local-order/local-order",
+        "text": "📦 我的订单"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "👤 个人中心"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

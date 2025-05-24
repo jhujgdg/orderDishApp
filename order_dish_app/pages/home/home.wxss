@@ -1,0 +1,95 @@
+.page-container {
+  min-height: 100vh;
+  padding: 0 1px; /* 减少左右留白，仅保留8px */
+  background-color: transparent; /* 透明背景，仅显示图片 */
+}
+/* 页面容器 - 减少左右边距 */
+.container {
+  padding: 0 8px; /* 减少左右留白，仅保留8px */
+  background-color: #f9f9f97c;
+  background-image: url('https://tse4-mm.cn.bing.net/th/id/OIP-C.hkqpycb-MQG9_v6xJgcV_AAAAA?cb=iwp2&rs=1&pid=ImgDetMain');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* 搜索框 */
+.search-box {
+  display: flex;
+  align-items: center;
+  margin: 12px 5px; /* 减少搜索框的边距 */
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px; /* 增加输入框内边距 */
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 4px 0 0 4px;
+  font-size: 16px; /* 增大字体 */
+}
+
+.search-button {
+  padding: 10px 15px; /* 增加按钮内边距 */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 16px; /* 增大字体 */
+}
+
+/* 内容区域容器 */
+.section-container {
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 12px 5px; /* 减少标题边距 */
+}
+
+/* 菜品列表 */
+.dish-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-row {
+  display: flex;
+  align-items: center;
+  margin: 0 5px 10px 5px; /* 减少行间距和左右边距 */
+  background-color: white;
+  border-radius: 6px; /* 增加圆角 */
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dish-img {
+  width: 140px; /* 增大图片宽度 */
+  height: 140px; /* 增大图片高度 */
+  object-fit: cover;
+}
+
+.dish-info {
+  flex: 1;
+  padding: 15px; /* 增加信息区域内边距 */
+}
+
+.dish-name {
+  font-size: 18px; /* 增大菜品名称字体 */
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.dish-price {
+  font-size: 16px; /* 增大价格字体 */
+  color: #e64340; /* 使用更突出的红色 */
+  font-weight: 500;
+}
+
+.no-result {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  padding: 20px 0;
+}

@@ -1,0 +1,49 @@
+<view class="container">
+  <!-- 菜品图片 -->
+  <image class="dish-img" src="{{dish.imageUrl}}" mode="aspectFill"></image>
+  
+  <!-- 菜品信息头部 -->
+  <view class="dish-header">
+    <view class="dish-info">
+      <view class="dish-name">{{dish.name}}</view>
+      <view class="dish-price">￥{{dish.price}}</view>
+    </view>
+    <!-- 加入订单图标 (移至标题行右侧) -->
+    <view class="add-to-order-icon" bindtap="addToOrder">
+      <image src="/utils/images/add.png" class="add-icon"></image>
+    </view>
+  </view>
+  
+  <!-- 菜品描述 -->
+  <view class="dish-description">{{dish.description}}</view>
+  
+  <!-- 营养成分 -->
+  <view class="nutrition-section">
+    <view class="section-title">营养成分</view>
+    <view class="nutrition-item">热量：{{dish.calories}} kcal</view>
+    <view class="nutrition-item">蛋白质：{{dish.protein}} g</view>
+    <view class="nutrition-item">脂肪：{{dish.fat}} g</view>
+    <view class="nutrition-item">碳水化合物：{{dish.carbs}} g</view>
+  </view>
+  
+  <!-- 用户评论 -->
+  <view class="reviews-section">
+    <view class="section-title">用户评论</view>
+    <scroll-view class="reviews-list" scroll-y>
+      <block wx:if="{{reviews.length > 0}}">
+        <view class="reviews-list">
+          <block wx:for="{{reviews}}" wx:key="review_id">
+            <view class="review-item">
+              <view class="rating">评分：{{item.rating}} ⭐</view>
+              <view class="comment">{{item.comment}}</view>
+              <view class="date">{{item.reviewDate}}</view>
+            </view>
+          </block>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="no-review">暂无评论</view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,127 @@
+/* 页面容器 */
+.container {
+  padding: 16px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 菜品头部 (包含名称、价格和加入购物车图标) */
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* 菜品名称与价格 */
+.dish-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dish-price {
+  font-size: 18px;
+  color: #4caf50;
+  margin-top: 4px;
+}
+
+/* 菜品描述 */
+.dish-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 12px;
+}
+
+/* 营养成分 */
+.nutrition-section {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.nutrition-item {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* 加入订单图标 (调整后的样式) */
+.add-to-order-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.add-icon:active {
+  transform: scale(0.95);
+}
+
+/* 用户评论部分 */
+.reviews-section {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.reviews-list {
+  margin-top: 16px;
+}
+
+.review-item {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+  font-size: 14px;
+  color: #ffa500;
+}
+
+.comment {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
+}
+
+.date {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* 无评论时提示 */
+.no-review {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  padding: 20px 0;
+}

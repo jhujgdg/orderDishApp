@@ -1,0 +1,69 @@
+.order-detail-container {
+  padding: 20rpx;
+}
+
+.order-info {
+  background-color: #ffffff;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 20rpx;
+}
+
+.order-info text {
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.order-item {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.dish-image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+
+.dish-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dish-info text {
+  font-size: 26rpx;
+  color: #444;
+  margin-bottom: 6rpx;
+}
+
+.dish-name {
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #222;
+}
+
+.comment-btn {
+  align-self: flex-start;
+  margin-top: 10rpx;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 8rpx;
+  line-height: 1;
+}
